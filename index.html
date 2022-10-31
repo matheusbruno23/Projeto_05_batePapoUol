@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="enterscreen">
+        <img src="./imagens/logo 1.png">
+        <input type="text"  class="name" placeholder="Digite o seu nome">
+        <button onclick="hideEnterScreen()">Entrar</button>
+    </div>
+    <div class="container">
+        <div class="menu hidden">
+            <div class="title">
+                <p>Escolha um contato para enviar mensagem:</p>
+            </div>
+            <ul class="userbox">
+                <il onclick="select(this)" class="typedisplay"><ion-icon name="people"></ion-icon><span class="sizetxt"> todos </span> <ion-icon class="check" name="checkmark"></ion-icon></il>
+                <il onclick="select(this)" class="typedisplay"><ion-icon name="person-circle"></ion-icon><span class="sizetxt"> nome1 </span> <ion-icon class="check" name="checkmark"></ion-icon></il>
+                <il onclick="select(this)" class="typedisplay"><ion-icon name="person-circle"></ion-icon><span class="sizetxt"> nome2 </span> <ion-icon class="check" name="checkmark"></ion-icon></il>
+            </ul>
+            <div class="titlemid">
+                <p>Escolha a visibilidade:</p>
+            </div>
+            <ul class="userbox2">
+                <il onclick="select()" class="typedisplay2"><ion-icon name="lock-open"></ion-icon><span class="sizetxt"> Público</span> <ion-icon  class="check" name="checkmark"></ion-icon></il>
+                <il onclick="select()" class="typedisplay2"><ion-icon name="lock-closed"></ion-icon><span class="sizetxt"> Reservadamente</span> <ion-icon class="check" name="checkmark"></ion-icon></il>
+            </ul>
+        </div>
+        <div class="container1 turnoff">
+        <div class="top">
+            <img src="./imagens/logo 1.png">
+            <ion-icon name="people" class="icon" onclick="showMenu()"></ion-icon>
+        </div>
+        <div class="mid" onclick="hideMenu()">
+            <div class="midbox">
+                <div class="message enterChat"> (horário) nomedeusuário: entrou na sala ...</div>
+                <div class="message all">(horário) nomedeusuário para Todos: mensagem</div>
+                <div class="message private">(horário) nomedeusuário reservadamente para NomeoutroUser: mensagem</div>
+            </div>
+        </div>
+        <div class="bot" onclick="hideMenu()">
+            <input type="text" placeholder="Escreva aqui ..." class="txtinput"></input>
+            <button onclick="sendMessage()"><ion-icon name="paper-plane-outline" class="iconbot"></ion-icon></button>
+        </div>
+    </div>
+    </div>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
